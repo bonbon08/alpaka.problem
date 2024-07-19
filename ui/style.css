@@ -1,0 +1,73 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-color: #134B70;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+}
+.header {
+    width: 100%;
+    height: 100px;
+}
+.searchcontainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    justify-self: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search {
+    width: 300px;
+    height: 40px;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: white;
+    color: #134B70;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    
+}
+#icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 20px;
+    padding-right: 10px;
+}
+.trollcontainer {
+    display: flex;
+    justify-content: center;
+}
+.trollinglevel {
+    width: 320px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-family: "Arial", sans-serif;font-family: "Arial", sans-serif;
+    color: white;
+}
+.trolling{
+    width: 320px;
+
+}
+.results {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.resultstext {
+    font-family: "Arial", sans-serif;font-family: "Arial", sans-serif;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
