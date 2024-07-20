@@ -12,7 +12,7 @@
 <body>
 
     <input type="checkbox" id="check">
-    <form id="myForm" onsubmit="SubForm()">
+    <form id="myForm">
         <div class="box">
             <input type="text" placeholder="Search Here..." name="search">
             <button type="submit"><i class="fas fa-search"></i></button>
@@ -23,8 +23,8 @@
         </div>
     </form>
     <script src="{{ url_for('static', filename='all.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>

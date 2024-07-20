@@ -1,11 +1,11 @@
-function SubForm (){
-    Event.preventDefault();
+$("#myForm").submit(function (e) {
+    e.preventDefault();
     $.ajax({
         url: '/submit',
         type: 'post',
         data: $('#myForm').serialize(),
-        success: function(){
+        success: function () {
             alert("worked");
         }
     });
-}
+});
