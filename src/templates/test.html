@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='all.min.css') }}">
-    <title>Neumorphism</title>
+    <title>alpaka.problem</title>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -22,6 +22,7 @@
             <p class="trolltext">Trolling Factor</p>
             <input type="range" id="slider" name="trolling">
         </div>
+        <img id="image" src="{{ url_for('static', filename='waiting.gif') }}" alt="waiting icon">
         <p class="result">
             {{ result }}
         </p>

@@ -12,10 +12,10 @@ def get_ai_return(trolllevel, theme):
         "ein bisschen ernst",
         "eher weniger ernst",
         "nicht ernst",
-        "ein wenig trollend",
-        "teilweise trollend",
-        "trollend",
-        "sehr trollend"
+        "ein wenig ironisch",
+        "teilweise ironisch",
+        "ironisch",
+        "sehr ironisch"
     ]
     promt = "Mein Thema ist: " + theme + " und es soll ernsthafftigkeit " + seriousnesses[trolllevel] +" haben, bitte halte die formulierung der worte und wort wahl auf dem nivou eines durchnittlichen 12-18 jährigen"
     sys_promt="""
@@ -26,8 +26,6 @@ def get_ai_return(trolllevel, theme):
     . Your output should be directly printable on a poster.
 
     your answer should be in german and you should make it a little bit trolly if the user wants to 
-    (you will get a number from 0 to 10 about how trolly it should be but just intigrate this factor into your answer but into the hole answerd not only in one specific 
-    part of your answer and dont talk about it)
     and the problem should be themed after the wish of the user.
     """
     with model.chat_session(system_prompt=sys_promt):
