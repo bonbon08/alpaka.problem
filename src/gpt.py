@@ -1,7 +1,7 @@
 from gpt4all import GPT4All
 
 
-model = GPT4All("Phi-3-mini-4k-instruct.Q4_0.gguf", model_path=".cache/") 
+model = GPT4All("Phi-3-mini-4k-instruct.Q4_0.gguf") 
 
 def get_ai_return(trolllevel, theme):
     seriousnesses = [
