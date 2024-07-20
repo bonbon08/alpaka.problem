@@ -122,6 +122,7 @@ input[type="checkbox"] {
     transform: translate(-50%,-50%);
 }
 .loadertext {
+    display: none;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
