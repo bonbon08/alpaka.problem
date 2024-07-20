@@ -22,9 +22,11 @@
             <p class="trolltext">Trolling Factor</p>
             <input type="range" id="slider" name="trolling">
         </div>
-        <img id="image" src="{{ url_for('static', filename='waiting.gif') }}" alt="waiting icon">
-        <p class="result">test</p>
+        <p class="result">
+            {{ result }}
+        </p>
     </form>
+    <img id="image" src="{{ url_for('static', filename='waiting.gif') }}" alt="waiting icon">
     <script src="{{ url_for('static', filename='all.min.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
