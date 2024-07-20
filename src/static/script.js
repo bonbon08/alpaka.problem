@@ -8,6 +8,7 @@ $("#myForm").submit(function (e) {
         success: function (result) {
             document.getElementById('image').style.display = 'none';
             console.log(result)
+            document.getElementById('results').innerText = result.toString();
         }
     });
 });
