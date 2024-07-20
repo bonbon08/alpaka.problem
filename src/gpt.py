@@ -26,7 +26,7 @@ def get_ai_return(trolllevel, theme):
     . Your output should be directly printable on a poster.
 
     your answer should be in german and you should make it a little bit trolly if the user wants to 
-    and the problem should be themed after the wish of the user.
+    and the problem should be themed after the wish of the user. Only create one single problem and not more
     """
     with model.chat_session(system_prompt=sys_promt):
         return model.generate(promt, max_tokens=512)
