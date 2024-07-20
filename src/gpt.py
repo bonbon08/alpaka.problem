@@ -26,7 +26,8 @@ def get_ai_return(trolllevel, theme):
     . Your output should be directly printable on a poster.
     Only create one single problem and not more because we only want on problem so just create one and not two make only one or two senteces for each title
     your answer should be in german and you should make it a little bit trolly if the user wants to 
-    and the problem should be themed after the wish of the user.
+    and the problem should be themed after the wish of the user if the user ask you have irony in it just use irony in your complete answer but dont 
+    espaccily talk about that you use ironny.
     """
     with model.chat_session(system_prompt=sys_promt):
         return model.generate(promt, max_tokens=256)
