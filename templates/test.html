@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='all.min.css') }}">
+    <title>Neumorphism</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <form id="myForm" onsubmit="SubForm()">
+        <div class="box">
+            <input type="text" placeholder="Search Here..." name="search">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="slider">
+            <p class="trolltext">Trolling Factor</p>
+            <input type="range" id="slider" name="trolling">
+        </div>
+    </form>
+    <script src="{{ url_for('static', filename='all.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>
