@@ -121,3 +121,10 @@ input[type="checkbox"] {
     left: 50%;
     transform: translate(-50%,-50%);
 }
+.loadertext {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
+    font-size: 600;
+}

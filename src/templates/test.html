@@ -8,6 +8,7 @@
     <title>alpaka.problem</title>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='font.css') }}">
 </head>
 
 <body>
@@ -22,9 +23,10 @@
             <p class="trolltext">Trolling Factor</p>
             <input type="range" id="slider" name="trolling">
         </div>
-        <p class="result"> </p>
+        <p class="result"></p>
     </form>
     <img id="image" src="{{ url_for('static', filename='waiting.gif') }}" alt="waiting icon">
+    <p class="loadertext" style="font-family: 'Monocraft', monospace;">Loading</p>
     <script src="{{ url_for('static', filename='all.min.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
