@@ -24,4 +24,4 @@ Source = "https://github.com/bonbon/alpaka-problem"
 source = "vcs"
 
 [tool.hatch.envs.main.scripts]
-cli-name= "python3 src/main.py"
+cli-name= "python src/main.py"
