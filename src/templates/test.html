@@ -26,7 +26,7 @@
         <p class="result"></p>
     </form>
     <img id="image" src="{{ url_for('static', filename='waiting.gif') }}" alt="waiting icon">
-    <p class="loadertext" style="font-family: 'Monocraft', monospace;">Loading</p>
+    <p id="loadertext" class="loadertext" style="font-family: 'Monocraft', monospace;">Loading</p>
     <script src="{{ url_for('static', filename='all.min.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
