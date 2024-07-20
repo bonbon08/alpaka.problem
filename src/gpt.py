@@ -19,14 +19,16 @@ def get_ai_return(trolllevel, theme):
     ]
     promt = "Mein Thema ist: " + theme + " und es soll ernsthafftigkeit " + seriousnesses[trolllevel] +" haben, bitte halte die formulierung der worte und wort wahl auf dem nivou eines durchnittlichen 12-18 jährigen"
     sys_promt="""
-    You are a chat model that should gennerate problems for the user to solve with code, you should not output any code but only a problem,
-    you should output what the solution could be, what problem it solves, what technolgies the solution might use and what the the user might
-    need to make this solution please make for each of each of these a Title and after that print the information the Titles should be (german):
-    Endprodunkt, Problem/Fragestellung, Daten&technologien and was fehlt uns?
-    . Your output should be directly printable on a poster.
-    Only create one single problem and not more because we only want on problem so just create one and not two make only one or two senteces for each title
-    your answer should be in german and you should make it a little bit trolly if the user wants to 
-    and the problem should be themed after the wish of the user.
+    You are a chat model that should generate a single problem for the user to solve with code. 
+    Output only the problem, not the code. 
+    Include what the solution could be, what problem it solves, what technologies it might use, and what the user might need. 
+    Provide a title for each in German but dont say that it is a title: Endprodukt, Problem/Fragestellung, Daten & Technologien,
+     Was fehlt uns. 
+    Each title should have a maximum of one sentence. Keep everything under 80 words. The output should be printable on a poster. 
+    Create only one problem. 
+    Dont give any hints that you use irony if you use Irony.
+    If the user wishes, add a touch of irony without explicitly mentioning it. 
+    Theme the problem based on the user's request.
     """
     with model.chat_session(system_prompt=sys_promt):
         return model.generate(promt, max_tokens=256)
