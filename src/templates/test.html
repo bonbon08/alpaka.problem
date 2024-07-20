@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='all.min.css') }}">
-    <title>Neumorphism</title>
+    <title>alpaka.problem</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='font.css') }}">
 </head>
 
 <body>
 
     <input type="checkbox" id="check">
-    <form id="myForm" onsubmit="SubForm()">
+    <form id="myForm">
         <div class="box">
             <input type="text" placeholder="Suchen..." name="search">
             <button type="submit"><i class="fas fa-search"></i></button>
@@ -21,10 +23,13 @@
             <p class="trolltext">Seriosität</p>
             <input type="range" id="slider" name="trolling">
         </div>
+        <p class="result"></p>
     </form>
+    <img id="image" src="{{ url_for('static', filename='waiting.gif') }}" alt="waiting icon">
+    <p id="loadertext" class="loadertext" style="font-family: 'Monocraft', monospace;">Loading</p>
     <script src="{{ url_for('static', filename='all.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>

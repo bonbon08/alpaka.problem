@@ -1,36 +1,27 @@
-from gpt4all import GPT4All
+from flask import Flask, render_template, request
+from gpt import get_ai_return
 
-trolllevel = 5
-theme = "Klima"
+app = Flask(__name__)
 
-seriousnesses = [
-    "sehr ernst",
-    "ernst",
-    "nahezu ernst",
-    "teilweise ernst",
-    "ein bisschen ernst",
-    "eher weniger ernst",
-    "nicht ernst",
-    "ein wenig trollend",
-    "teilweise trollend",
-    "trollend",
-    "sehr trollend"
-]
+@app.route('/')
+def index():
+    # Serve your HTML file
+    return render_template('test.html')
 
-model = GPT4All("Phi-3-mini-4k-instruct.Q4_0.gguf", model_path=".cache/") 
+@app.route('/submit', methods=['POST'])
+def submit():
+    # Extract data from form
+    search_text = request.form['search']
+    trolling_level = request.form['trolling']
+    # Here you can call any function and pass the extracted data
+    return process_data(int(int(trolling_level) / 10), search_text)
 
-promt = "Mein Thema ist: " + theme + " und es soll ernsthafftigkeit " + seriousnesses[trolllevel] +" haben, bitte halte die formulierung der worte und wort wahl auf dem nivou eines durchnittlichen 12-18 jährigen"
-sys_promt="""
-You are a chat model that should gennerate problems for the user to solve with code, you should not output any code but only a problem,
- you should output what the solution could be, what problem it solves, what technolgies the solution might use and what the the user might
-need to make this solution please make for each of each of these a Title and after that print the information the Titles should be (german):
-Endprodunkt, Problem/Fragestellung, Daten&technologien and was fehlt uns?
-. Your output should be directly printable on a poster.
+def process_data(search_text, trolling_level):
+    
+    print(f"Search Text: {search_text}, Trolling Level: {trolling_level}")
+    result = get_ai_return(search_text, trolling_level) #Komischer Code: trollevel und theme sind vertauscht
+    print("Results avalible")
+    return result
 
-your answer should be in german and you should make it a little bit trolly if the user wants to 
-(you will get a number from 0 to 10 about how trolly it should be but just intigrate this factor into your answer but into the hole answerd not only in one specific 
-part of your answer and dont talk about it)
-and the problem should be themed after the wish of the user.
-"""
-with model.chat_session(system_prompt=sys_promt):
-    print(model.generate(promt, max_tokens=512))
+if __name__ == '__main__':
+    app.run(debug=True)
