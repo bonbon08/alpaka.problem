@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "alpaka-problem"
+dynamic = ["version"]
+description = ' A tool to generate problems because I dont have enought '
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "bonbon", email = "mail@jan-schmitt.eu" },
+]
+dependencies = ["gpt4all", "flask"]
+
+[project.urls]
+Documentation = "https://github.com/bonbon/alpaka-problem#readme"
+Issues = "https://github.com/bonbon/alpaka-problem/issues"
+Source = "https://github.com/bonbon/alpaka-problem"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.envs.main.scripts]
+cli-name= "python3 src/main.py"
