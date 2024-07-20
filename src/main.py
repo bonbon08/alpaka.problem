@@ -21,7 +21,7 @@ def process_data(search_text, trolling_level):
     
     print(f"Search Text: {search_text}, Trolling Level: {trolling_level}")
     result = get_ai_return(search_text, trolling_level)
-    print(result)
+    return result
 
 if __name__ == '__main__':
     app.run(debug=True)
