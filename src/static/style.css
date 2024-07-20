@@ -7,9 +7,11 @@
 body {
     background-color: #e0e4eb;
 }
+
 input[type="checkbox"] {
     display: none;
 }
+
 .box {
     position: absolute;
     top: 30%;
@@ -19,6 +21,7 @@ input[type="checkbox"] {
     transition: .5s;
     height: 60px;
 }
+
 .box button {
     position: absolute;
     right: 0;
@@ -34,13 +37,16 @@ input[type="checkbox"] {
     box-shadow: none;
     outline: none;
     border: none;
-    background-color: #e0e4eb;;
+    background-color: #e0e4eb;
+    ;
 }
-.box button:hover{
+
+.box button:hover {
     box-shadow: -10px -10px 15px #edeff1,
-    10px 10px 20px #cacfd8;
+        10px 10px 20px #cacfd8;
     transform: scale(1.1);
 }
+
 .box input {
     width: 100%;
     height: 100%;
@@ -52,14 +58,16 @@ input[type="checkbox"] {
     padding-left: 20px;
     color: gray;
     box-shadow: -10px -10px 15px #edeff1,
-    10px 10px 15px #cacfd8;
+        10px 10px 15px #cacfd8;
     transition: .5s;
     opacity: 1;
 }
+
 .box input:focus {
     box-shadow: -10px -10px 40px #edeff1,
-    10px 10px 40px #cacfd8;
+        10px 10px 40px #cacfd8;
 }
+
 /*#check:checked+.box{
     width: 500px;
 }
@@ -83,11 +91,18 @@ input[type="checkbox"] {
     transition: .5s;
     height: 60px;
 }
+
 #slider {
     width: 490px;
 }
+
 .trolltext {
     color: gray;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.result {
+    position: absolute;
+    top: 35%;
 }
