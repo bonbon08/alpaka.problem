@@ -1,4 +1,5 @@
 function SubForm (){
+    Event.preventDefault();
     $.ajax({
         url: '/submit',
         type: 'post',
