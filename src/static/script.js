@@ -5,8 +5,9 @@ $("#myForm").submit(function (e) {
         url: '/submit',
         type: 'post',
         data: $('#myForm').serialize(),
-        success: function () {
+        success: function (result) {
             document.getElementById('image').style.display = 'none';
+            console.log(result)
         }
     });
 });

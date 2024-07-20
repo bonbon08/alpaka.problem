@@ -14,8 +14,7 @@ def submit():
     search_text = request.form['search']
     trolling_level = request.form['trolling']
     # Here you can call any function and pass the extracted data
-    process_data(int(int(trolling_level) / 10), search_text)
-    return 'Form Submitted'
+    return process_data(int(int(trolling_level) / 10), search_text)
 
 def process_data(search_text, trolling_level):
     
