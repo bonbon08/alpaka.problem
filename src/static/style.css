@@ -118,5 +118,6 @@ input[type="checkbox"] {
     display: none;
     position: absolute;
     top: 30%;
-    left: 37%;
+    left: 50%;
+    transform: translateX(-50%);
 }
