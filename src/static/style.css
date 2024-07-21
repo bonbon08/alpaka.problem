@@ -131,6 +131,7 @@ input[type="checkbox"] {
     transform: translateX(-50%);
     top: 90%;
     transform: translateX(-50%);
+    font-family: Arial, Helvetica, sans-serif;
 }
 .Alpaca {
     position: fixed; 
