@@ -32,4 +32,4 @@ def get_ai_return(trolllevel, theme):
     Passe das Problem an das Thema des Benutzers an.
     """
     with model.chat_session(system_prompt=sys_promt):
-        return model.generate(promt, max_tokens=140)
+        return model.generate(promt, max_tokens=200)
