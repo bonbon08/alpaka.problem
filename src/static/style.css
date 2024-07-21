@@ -121,6 +121,9 @@ input[type="checkbox"] {
     left: 50%;
     transform: translate(-50%,-50%);
 }
+#footerclass {
+    display: block;
+}
 .loadertext {
     display: none;
     position: absolute;
@@ -130,10 +133,19 @@ input[type="checkbox"] {
     transform: translateX(-50%);
 }
 .Alpaca {
-    position: absolute;
-    bottom: 0%;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    height: 4%; 
+    width: 100%; 
+    background-color: rgb(76, 76, 76);
+    z-index: 10;
 }
-.Footertext{
-    color: grey;
+
+.Footertext {
+    margin: 0; 
+    text-align: center;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 4vh;
 }
