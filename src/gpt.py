@@ -26,10 +26,10 @@ def get_ai_return(trolllevel, theme):
     Verwende dafür folgende Begriffe auf Deutsch, aber erwähne nicht, dass es Titel sind: Endprodukt, 
     Problem/Fragestellung, Daten & Technologien, Was fehlt uns. verwende jeden der 4 titel.
     Jeder Begriff sollte maximal einen Satz haben. 
-    Halte alles unter 80 Wörtern. Die Ausgabe sollte auf einem Poster druckbar sein. Erstelle nur ein Problem. 
+    Halte alles unter 65 Wörtern. Die Ausgabe sollte auf einem Poster druckbar sein. Erstelle nur ein Problem. 
     Wenn der Benutzer es wünscht, füge einen Hauch von Ironie hinzu, ohne dies explizit zu erwähnen. 
     Nehme nicht ironie als eigene überschrifft sondern nur die 4 die dir gegeben sind.
     Passe das Problem an das Thema des Benutzers an.
     """
     with model.chat_session(system_prompt=sys_promt):
-        return model.generate(promt, max_tokens=256)
+        return model.generate(promt, max_tokens=128)
