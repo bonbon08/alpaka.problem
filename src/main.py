@@ -14,12 +14,12 @@ def submit():
     search_text = request.form['search']
     trolling_level = request.form['trolling']
     # Here you can call any function and pass the extracted data
-    return process_data(int(int(trolling_level) / 10), search_text)
+    return process_data(search_text, int(int(trolling_level) / 10))
 
 def process_data(search_text, trolling_level):
     
     print(f"Search Text: {search_text}, Trolling Level: {trolling_level}")
-    result = get_ai_return(search_text, trolling_level) #Komischer Code: trollevel und theme sind vertauscht
+    result = get_ai_return(trolling_level, search_text)
     print("Results avalible")
     return result
 
