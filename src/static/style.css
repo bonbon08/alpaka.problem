@@ -43,7 +43,7 @@ input[type="checkbox"] {
 
 .box button:hover {
     box-shadow: -10px -10px 15px #edeff1,
-        10px 10px 20px #cacfd8;
+        10px 10px 20px #9fa2a8;
     transform: scale(1.1);
 }
 
@@ -58,14 +58,14 @@ input[type="checkbox"] {
     padding-left: 20px;
     color: gray;
     box-shadow: -10px -10px 15px #edeff1,
-        10px 10px 15px #cacfd8;
+        10px 10px 15px #9fa2a8;
     transition: .5s;
     opacity: 1;
 }
 
 .box input:focus {
     box-shadow: -10px -10px 40px #edeff1,
-        10px 10px 40px #cacfd8;
+        10px 10px 40px #9fa2a8;
 }
 
 /*#check:checked+.box{
@@ -83,7 +83,7 @@ input[type="checkbox"] {
 
 .slider {
     position: absolute;
-    top: 35%;
+    top: 36%;
     left: 50%;
 
     transform: translateX(-49%);
@@ -104,7 +104,7 @@ input[type="checkbox"] {
 
 .result {
     position: absolute;
-    top: 45%;
+    top: 46%;
     left: 50%;
     transform: translateX(-50%);
     align-self: center;
