@@ -4,45 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='all.min.css') }}">
+    <title>alpaka.problem</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='font.css') }}">
 </head>
 
 <body>
-    <div class="container">
-        <form id="myForm">
-            <div class="header"></div>
-            <div class="searchcontainer">
-                <input type="text" class="search" placeholder="Search..." name="search">
-                    <input type="image" id="icon" src="{{ url_for('static', filename='search.svg') }}">
-            </div>
-            <a href="" class="dropdown" style="display: none;"></a>
-            <div class="trollcontainer">
-                <p class="trollinglevel">Trolling Level</p>
-            </div>
-            <div class="trollcontainer">
-                <input type="range" class="trolling" name="trolling">
-            </div>
-            <div class="results">
-                <p class="resultstext">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                    et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                    dolor
-                    sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-                    duo
-                    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                    amet.
-                </p>
-            </div>
-        </form>
-    </div>
 
-
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <input type="checkbox" id="check">
+    <form id="myForm">
+        <div class="box">
+            <input type="text" placeholder="Suchen..." name="search">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="slider">
+            <p class="trolltext">Ironie</p>
+            <input type="range" id="slider" name="trolling">
+        </div>
+        <p class="result"></p>
+    </form>
+    <img id="image" src="{{ url_for('static', filename='waiting.gif') }}" alt="waiting icon">
+    <p id="loadertext" class="loadertext" style="font-family: 'Monocraft', monospace;">Loading</p>
+    <script src="{{ url_for('static', filename='all.min.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>

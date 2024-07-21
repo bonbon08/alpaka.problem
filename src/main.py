@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # Serve your HTML file
-    return render_template('test.html')
+    return render_template('index.html')
 
 @app.route('/submit', methods=['POST'])
 def submit():
